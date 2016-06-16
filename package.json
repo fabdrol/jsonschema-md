@@ -1,32 +1,32 @@
 {
-    "name": "jsonschema-md",
-    "version": "0.2.0",
-    "description": "Generate Markdown documentation for your JSON schema",
-    "main": "src/index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Joxoo Software Solution",
-    "dependencies": {
-        "lodash": "^2.4.1"
-    },
-    "keywords": [
-        "json-schema",
-        "markdown",
-        "documentation",
-        "md",
-        "jsonschema"
-    ],
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/joxoo/jsonschema-md/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/joxoo/jsonschema-md.git"
-    },
-
-    "bin": {
-        "jsonschema-md": "src/index.js"
-    }
+  "name": "signalk-documentation-generator",
+  "version": "0.1.0",
+  "description": "Generate Signal K specification documentation from the schema files",
+  "main": "index.js",
+  "author": "Fabian Tollenaar <fabian@decipher.industries>",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "deep-pick": "^0.1.0",
+    "json-schema-load-tree": "^0.2.0",
+    "lodash": "^2.4.2",
+    "mz": "^2.4.0"
+  },
+  "keywords": [
+    "json-schema",
+    "markdown",
+    "documentation",
+    "md",
+    "jsonschema",
+    "signalk",
+    "signal k",
+    "specification"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fabdrol/signalk-documentation-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabdrol/signalk-documentation-generator.git"
+  }
 }
