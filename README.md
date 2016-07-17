@@ -14,6 +14,6 @@ signalk-docgen -s ./schema -o ./build
 - [x] Add support for `allOf`, as this is extensively used by SK schema
 - [ ] Add list of child nodes in each documentation file
 - [ ] Improve styling/Signal K branding
-- [ ] Add real-times search box
+- [x] Add real-times search box
 - [ ] Add NICE syntax highlighting to `<code>` blocks
 - [ ] Add support for fetching latest `master` schema from GitHub
