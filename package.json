@@ -4,12 +4,19 @@
   "description": "Generate Signal K specification documentation from the schema files",
   "main": "index.js",
   "author": "Fabian Tollenaar <fabian@decipher.industries>",
+  "scripts": {
+    "test": "DEBUG=signalk-documentation-generator node .",
+    "start": "node ."
+  },
   "dependencies": {
     "debug": "^2.2.0",
     "deep-pick": "^0.1.0",
     "json-schema-load-tree": "^0.2.0",
     "lodash": "^2.4.2",
-    "mz": "^2.4.0"
+    "markdown-it": "^7.0.0",
+    "mz": "^2.4.0",
+    "rimraf": "^2.5.2",
+    "slug": "^0.9.1"
   },
   "keywords": [
     "json-schema",
