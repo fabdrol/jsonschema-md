@@ -2,13 +2,11 @@
 
 'use strict'
 
-const Parser = require('./Parser')
+const Parser = require('../lib/Parser')
 const path = require('path')
 const argv = require('minimist')(process.argv.slice(2))
 
 let schema = path.join(__dirname, '../schema')
-let definitions = path.join(schema, 'definitions.json')
-let entry = path.join(schema, 'signalk.json')
 let output = path.join(process.cwd(), './build')
 let debug = false
 
@@ -31,5 +29,8 @@ if (typeof argv.output === 'string' && argv.output.trim().length > 0) {
 if (typeof argv.debug !== 'undefined') {
   debug = true
 }
+
+let definitions = path.join(schema, 'definitions.json')
+let entry = path.join(schema, 'signalk.json')
 
 new Parser({ definitions, entry, output, debug })
