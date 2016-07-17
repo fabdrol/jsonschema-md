@@ -1,6 +1,6 @@
 {
   "name": "signalk-documentation-generator",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "description": "Generates Signal K specification documentation from the schema files",
   "main": "index.js",
   "author": "Fabian Tollenaar <fabian@decipher.industries>",
