@@ -13,6 +13,7 @@ signalk-docgen -s ./schema -o ./build
 - [x] Fix issue with leave nodes
 - [x] Add support for `allOf`, as this is extensively used by SK schema
 - [ ] Add list of child nodes in each documentation file
+- [ ] Hide the "meta"/final level of leaf nodes (`_attr`, `value`, `values`, etc)
 - [ ] Improve styling/Signal K branding
 - [x] Add real-times search box
 - [ ] Add NICE syntax highlighting to `<code>` blocks
