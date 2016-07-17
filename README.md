@@ -12,7 +12,7 @@ signalk-docgen -s ./schema -o ./build
 
 ## TODO
 - [x] Fix issue with leave nodes
-- [ ] Add support for `allOf` and `anyOf`, as this is extensively used in SK
+- [ ] Add support for `allOf` and `anyOf`, as this is extensively used by SK schema
 - [ ] Add list of child nodes in 
 - [ ] Improve styling/Signal K branding
 - [ ] Add real-times search box
