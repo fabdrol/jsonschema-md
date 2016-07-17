@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
-<title>Signal K - /</title>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-</head>
-<body>
-<main class="container-fluid">
-<h1>Signal K - schema</h1>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+        <title>Signal K - /</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+      </head>
+      <body style="padding: 2em 0"><script>
+        $(document).ready(function() {
+          var keyup = _.debounce(function() {
+            var value = $(this).val().trim()
+
+            if (value === '') {
+              $('li').show()
+              return
+            }
+
+            $('li').each(function() {
+              var path = $(this).find('a').text()
+
+              if (path.indexOf(value) === -1) {
+                $(this).hide()
+              } else {
+                $(this).show()
+              }
+            })
+          }, 150)
+
+          $('input[type="search"]').on('keyup', keyup)
+        })
+      </script><section class="container">
+        <input type="search" placeholder="Filter" style="border-radius: 5px; border: 1px solid #ccc; display: block; width: 100%; margin: 2em 0; padding: .25em .5em;">
+      </section><section class="container" id="data"><h1>Signal K - schema</h1>
 <ul>
 <li><a href="self.html">/self</a></li>
 <li><a href="vessels.html">/vessels</a></li>
@@ -3996,7 +4021,4 @@
 <li><a href="resources.waypoints.__RegExp__.feature.id.html">/resources/waypoints/&lt;RegExp&gt;/feature/id</a></li>
 <li><a href="version.html">/version</a></li>
 </ul>
-
-</main>
-</body>
-</html>
+</section></body></html>
