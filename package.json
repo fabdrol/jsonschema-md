@@ -1,12 +1,16 @@
 {
   "name": "signalk-documentation-generator",
-  "version": "0.1.0",
-  "description": "Generate Signal K specification documentation from the schema files",
+  "version": "0.6.1",
+  "description": "Generates Signal K specification documentation from the schema files",
   "main": "index.js",
   "author": "Fabian Tollenaar <fabian@decipher.industries>",
   "scripts": {
-    "test": "DEBUG=signalk-documentation-generator node .",
+    "test": "DEBUG=signalk* node .",
     "start": "node ."
+  },
+  "preferGlobal": true,
+  "bin": {
+    "signalk-docgen": "./bin/signalk-docgen"
   },
   "dependencies": {
     "debug": "^2.2.0",
@@ -14,6 +18,7 @@
     "json-schema-load-tree": "^0.2.0",
     "lodash": "^2.4.2",
     "markdown-it": "^7.0.0",
+    "minimist": "^1.2.0",
     "mz": "^2.4.0",
     "rimraf": "^2.5.2",
     "slug": "^0.9.1"

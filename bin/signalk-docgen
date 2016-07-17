@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+'use strict'
+
+const Parser = require('./Parser')
+const path = require('path')
+const argv = require('minimist')(process.argv.slice(2))
+
+let schema = path.join(__dirname, '../schema')
+let definitions = path.join(schema, 'definitions.json')
+let entry = path.join(schema, 'signalk.json')
+let output = path.join(process.cwd(), './build')
+let debug = false
+
+if (typeof argv.s === 'string' && argv.s.trim().length > 0) {
+  schema = argv.s
+}
+
+if (typeof argv.schema === 'string' && argv.schema.trim().length > 0) {
+  schema = argv.schema
+}
+
+if (typeof argv.o === 'string' && argv.o.trim().length > 0) {
+  output = argv.o
+}
+
+if (typeof argv.output === 'string' && argv.output.trim().length > 0) {
+  output = argv.output
+}
+
+if (typeof argv.debug !== 'undefined') {
+  debug = true
+}
+
+new Parser({ definitions, entry, output, debug })

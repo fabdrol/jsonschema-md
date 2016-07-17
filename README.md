@@ -2,3 +2,18 @@
 
 ## About
 Generate Signal K specification documentation from the schema files.
+
+## Usage
+```
+signalk-docgen --schema ./schema --output ./build --debug
+# OR 
+signalk-docgen -s ./schema -o ./build
+```
+
+## TODO
+[x] Fix issue with leave nodes
+[ ] Add support for `allOf` and `anyOf`, as this is extensively used in SK
+[ ] Add list of child nodes in 
+[ ] Improve styling/Signal K branding
+[ ] Add real-times search box
+[ ] Add NICE syntax highlighting to `<code>` blocks
