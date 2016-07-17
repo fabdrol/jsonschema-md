@@ -9,41 +9,55 @@
 <body>
 <main class="container-fluid">
 <h2>@TODO: add a title</h2>
-<p><em>Data should be of type number.</em></p>
+<p><em>@TODO: add a description</em></p>
 <ul>
 <li>Type: <code>object</code></li>
 <li>Path: <code>/vessels/(^urn:mrn:(imo|signalk):(mmsi:[2-7][0-9]{8,8}|uuid:[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-4[0-9A-Fa-f]{3}-[89ABab][0-9A-Fa-f]{3}-[0-9A-Fa-f]{12}))|^(http(s?):.*|mailto:.*|tel:(\+?)[0-9]{4,})$/navigation/anchor/currentRadius</code></li>
 <li>Node: <code>currentRadius</code></li>
 <li>RegExp: <code>false</code></li>
 </ul>
+<h3>Example:</h3>
+<pre><code>@TODO: add an example
+</code></pre>
 <h3>Source:</h3>
 <pre><code>{
   &quot;type&quot;: &quot;object&quot;,
-  &quot;description&quot;: &quot;Data should be of type number.&quot;,
-  &quot;allOf&quot;: [
-    {
-      &quot;$ref&quot;: &quot;#/definitions/commonValueFields&quot;
+  &quot;required&quot;: [
+    &quot;timestamp&quot;,
+    &quot;$source&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;timestamp&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/timestamp&quot;
     },
-    {
-      &quot;properties&quot;: {
-        &quot;value&quot;: {
-          &quot;type&quot;: &quot;number&quot;
-        },
-        &quot;values&quot;: {
-          &quot;type&quot;: &quot;object&quot;,
-          &quot;patternProperties&quot;: {
-            &quot;.*&quot;: {
-              &quot;$ref&quot;: &quot;#/definitions/valuesNumberValue&quot;
-            }
-          }
+    &quot;$source&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/sourceRef&quot;
+    },
+    &quot;_attr&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/_attr&quot;
+    },
+    &quot;meta&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/meta&quot;
+    },
+    &quot;pgn&quot;: {
+      &quot;type&quot;: &quot;number&quot;
+    },
+    &quot;sentence&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;value&quot;: {
+      &quot;type&quot;: &quot;number&quot;
+    },
+    &quot;values&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;patternProperties&quot;: {
+        &quot;.*&quot;: {
+          &quot;$ref&quot;: &quot;#/definitions/valuesNumberValue&quot;
         }
       }
     }
-  ]
+  }
 }
-</code></pre>
-<h3>Example:</h3>
-<pre><code>@TODO: add an example
 </code></pre>
 
 </main>

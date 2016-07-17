@@ -16,40 +16,55 @@
 <li>Node: <code>datetime</code></li>
 <li>RegExp: <code>false</code></li>
 </ul>
+<h3>Example:</h3>
+<pre><code>@TODO: add an example
+</code></pre>
 <h3>Source:</h3>
 <pre><code>{
   &quot;type&quot;: &quot;object&quot;,
-  &quot;allOf&quot;: [
-    {
-      &quot;$ref&quot;: &quot;../definitions.json#/definitions/commonValueFields&quot;
+  &quot;required&quot;: [
+    &quot;timestamp&quot;,
+    &quot;$source&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;timestamp&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/timestamp&quot;
     },
-    {
-      &quot;properties&quot;: {
-        &quot;value&quot;: {
-          &quot;type&quot;: &quot;string&quot;,
-          &quot;description&quot;: &quot;GNSS Time and Date in ISO8601 format&quot;,
-          &quot;exmple&quot;: &quot;2015-12-05T13:11:59Z&quot;
-        },
-        &quot;gnssTimeSource&quot;: {
-          &quot;description&quot;: &quot;Source of GNSS Date and Time&quot;,
-          &quot;enum&quot;: [
-            &quot;GPS&quot;,
-            &quot;GLONASS&quot;,
-            &quot;Galileo&quot;,
-            &quot;Beidou&quot;,
-            &quot;IRNSS&quot;,
-            &quot;Radio Signal&quot;,
-            &quot;Internet&quot;,
-            &quot;Local clock&quot;
-          ]
-        }
-      }
+    &quot;$source&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/sourceRef&quot;
+    },
+    &quot;_attr&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/_attr&quot;
+    },
+    &quot;meta&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/meta&quot;
+    },
+    &quot;pgn&quot;: {
+      &quot;type&quot;: &quot;number&quot;
+    },
+    &quot;sentence&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;value&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;GNSS Time and Date in ISO8601 format&quot;,
+      &quot;exmple&quot;: &quot;2015-12-05T13:11:59Z&quot;
+    },
+    &quot;gnssTimeSource&quot;: {
+      &quot;description&quot;: &quot;Source of GNSS Date and Time&quot;,
+      &quot;enum&quot;: [
+        &quot;GPS&quot;,
+        &quot;GLONASS&quot;,
+        &quot;Galileo&quot;,
+        &quot;Beidou&quot;,
+        &quot;IRNSS&quot;,
+        &quot;Radio Signal&quot;,
+        &quot;Internet&quot;,
+        &quot;Local clock&quot;
+      ]
     }
-  ]
+  }
 }
-</code></pre>
-<h3>Example:</h3>
-<pre><code>@TODO: add an example
 </code></pre>
 
 </main>
