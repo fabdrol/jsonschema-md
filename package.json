@@ -15,6 +15,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "deep-pick": "^0.1.0",
+    "infuse.js": "^2.0.2",
     "json-schema-load-tree": "^0.2.0",
     "lodash": "^2.4.2",
     "markdown-it": "^7.0.0",
